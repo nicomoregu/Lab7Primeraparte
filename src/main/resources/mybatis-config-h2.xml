@@ -17,9 +17,8 @@
             </dataSource>
         </environment>
     </environments>
-        
+    
     <mappers>
-        <package name="edu.eci.pdsw.samples.mybatis.mappers"/>
+        <mapper resource="mappers/PacienteMapper.xml"></mapper>
     </mappers> 
-        
 </configuration>

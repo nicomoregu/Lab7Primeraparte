@@ -3,7 +3,7 @@
 ####Tecnologías de persistencia - Frameworks de Persistencia - Introducción a MyBatis
 
 
-Este ejercicio, tiene u
+En este laboratorio, se realizará el mismo ejercicio desarrollado semanas atrás con JDBC 'plano', pero esta vez haciendo uso de un 'framework' de persistencia.
 
 ![](img/PACIENTES_CONSULTAS.png)
 
@@ -156,3 +156,15 @@ public void insertConsulta(@Param("con") Consulta con,@Param("pacid")int id,@Par
     </insert>
 ```
 3. Usando las dos operaciones del mapper (que ya quedaron configuradas), implemente el método 'registrarNuevoPaciente', el cual, como lo indica su especificación, debe registrar un nuevo paciente y sus consultas relacionadas.
+
+
+##Parte III
+
+1. Teniendo en cuenta el ejercicio anterior, revise cómo se harían las pruebas con un esquema de persistencia basado en MyBATIS. Para esto, revise cómo se configura MyBatis para usar la base de datos 'temporal' H2 (mybatis-config-h2.xml).
+2. Revise cómo a través de MyBatis se realizan las siguientes operaciones:
+
+* Inicio de sesión.
+* Commit y rollback.
+* Cierre de sesión.
+
+	Con lo anterior, integre esta solución (y complemente lo que haga falta) en el esquema de patrón DAO realizado anteriormente (es decir, implemente la fábrica concreta y sus respectivos DAOs concretos).
