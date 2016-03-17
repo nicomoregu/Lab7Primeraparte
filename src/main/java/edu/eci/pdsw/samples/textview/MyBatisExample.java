@@ -69,7 +69,7 @@ public class MyBatisExample {
 
         SqlSession sqlss = sessionfact.openSession();
 
-        PacienteMapper pedmp=sqlss.getMapper(PacienteMapper.class);
+        PacienteMapper pmap=sqlss.getMapper(PacienteMapper.class);
 
         
         
@@ -78,9 +78,16 @@ public class MyBatisExample {
         
         sqlss.close();
 
-        
-        
     }
 
+    /**
+     * Registra un nuevo paciente y sus respectivas consultas (si existiesen).
+     * @param pmap mapper a traves del cual se hará la operacion
+     * @param p paciente a ser registrado
+     */
+    public void registrarNuevoPaciente(PacienteMapper pmap, Paciente p){
+        
+    }
+    
 
 }
