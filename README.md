@@ -154,5 +154,5 @@ public void insertConsulta(@Param("con") Consulta con,@Param("pacid")int id,@Par
     <insert id="insertConsulta" useGeneratedKeys="true" keyProperty="con.id">
     	COMPLETAR
     </insert>
-    
+```
 3. Usando las dos operaciones del mapper (que ya quedaron configuradas), implemente el método 'registrarNuevoPaciente', el cual, como lo indica su especificación, debe registrar un nuevo paciente y sus consultas relacionadas.
