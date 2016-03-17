@@ -83,7 +83,7 @@ public Paciente loadPacienteById(@Param("idpaciente")int id,@Param("tipoidpacien
 	Su elemento &lt;select&gt; correspondiente sería:
 
 	```xml
-    <select id='consultaMaestro' parameterType='map' resultMap='MaestroResult'>
+    <select id='consultarMaestrosEspeciales' parameterType='map' resultMap='MaestroResult'>
         select ma.propiedad1, ma.propiedad2, ma.propiedad3, det.propiedadx, det.propiedady, det.propiedadz from MAESTROS as ma left join DETALLES as det on ...
         where ma.propiedad2> #{salario} and ma.propiedad3< #{categoria} 
     </select>
