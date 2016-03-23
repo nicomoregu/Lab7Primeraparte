@@ -70,8 +70,8 @@ public class MyBatisExample {
         SqlSession sqlss = sessionfact.openSession();
 
         PacienteMapper pmap=sqlss.getMapper(PacienteMapper.class);
+        System.out.println(pmap.loadPacienteById(1, "cc"));
 
-        
         
         sqlss.commit();
         
@@ -86,7 +86,11 @@ public class MyBatisExample {
      * @param p paciente a ser registrado
      */
     public void registrarNuevoPaciente(PacienteMapper pmap, Paciente p){
-        
+        pmap.insertPaciente(p);
+        Set<Consulta> consultas = p.getConsultas();
+        for (Consulta consulta : consultas) {
+            pmap.insertConsulta(consulta, p.getId(), p.getTipo_id());
+        }
     }
     
 
